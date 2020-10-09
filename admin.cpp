@@ -17,15 +17,15 @@ admin::~admin()
 void admin::show_menu()
 {
 	cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl;
-	cout << "@@@  »¶Ó­Ê¹ÓÃÑ§¹¤ÏµÍ³  @@@" << endl;
-	cout << "@@@@@  1¡¢Ìí¼ÓĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  2¡¢²é¿´ĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  3¡¢É¾³ıĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  4¡¢ĞŞ¸ÄĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  5¡¢²éÕÒĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  6¡¢ÅÅĞòĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  7¡¢Çå¿ÕĞÅÏ¢   @@@@@" << endl;
-	cout << "@@@@@  0¡¢ÍË³ö       @@@@@" << endl;
+	cout << "@@@  æ¬¢è¿ä½¿ç”¨å­¦å·¥ç³»ç»Ÿ  @@@" << endl;
+	cout << "@@@@@  1ã€æ·»åŠ ä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  2ã€æŸ¥çœ‹ä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  3ã€åˆ é™¤ä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  4ã€ä¿®æ”¹ä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  5ã€æŸ¥æ‰¾ä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  6ã€æ’åºä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  7ã€æ¸…ç©ºä¿¡æ¯   @@@@@" << endl;
+	cout << "@@@@@  0ã€é€€å‡º       @@@@@" << endl;
 	cout << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << endl;
 }
 
@@ -33,7 +33,7 @@ void admin::showInfo()
 {
 	if (this->Isempty)
 	{
-		cout<<"ÎÄ¼ş²»´æÔÚ»ò¼ÇÂ¼Îª¿Õ£¡"<<endl;
+		cout<<"æ–‡ä»¶ä¸å­˜åœ¨æˆ–è®°å½•ä¸ºç©ºï¼"<<endl;
 	}
 	else
 	{
@@ -63,13 +63,13 @@ void admin::add()
 	int num, s, id;
 	string name,clas;
 	A* aa = NULL;
-	cout << "ÊäÈëµÄÈËÔ±ÊıÁ¿£º";
+	cout << "è¾“å…¥çš„äººå‘˜æ•°é‡ï¼š";
 	cin >> num;
 	if (num > 0)
 	{
-		int newsize = this->num + num;//ÖØĞÂ¼ÆËã¿Õ¼ä´óĞ¡
-		A** newarr = new A * [newsize];//ÖØĞÂÉêÇë¿Õ¼ä
-		if (this->a != NULL) //½«Ô­À´Êı×éÄÚÈİ×ªµ½ĞÂÊı×éÖĞ
+		int newsize = this->num + num;//é‡æ–°è®¡ç®—ç©ºé—´å¤§å°
+		A** newarr = new A * [newsize];//é‡æ–°ç”³è¯·ç©ºé—´
+		if (this->a != NULL) //å°†åŸæ¥æ•°ç»„å†…å®¹è½¬åˆ°æ–°æ•°ç»„ä¸­
 		{
 			for (int i = 0; i < this->num; i++)
 			{
@@ -78,32 +78,32 @@ void admin::add()
 		}
 		for (int i = 0; i < num; i++)
 		{
-			cout << "ÇëÊäÈëµÚ" << i + 1 << "¸öÈËÔ±µÄid:";
+			cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä¸ªäººå‘˜çš„id:";
 			cin >> id;
-			cout << "ÇëÊäÈëµÚ" << i + 1 << "¸öÈËÔ±µÄĞÕÃû:";
+			cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä¸ªäººå‘˜çš„å§“å:";
 			cin >> name;
 			
-			cout << "ÇëÑ¡ÔñÀà±ğ" << endl;
-			cout << "1¡¢Ñ§Éú" << endl;
-			cout << "2¡¢ÀÏÊ¦" << endl;
-			cout << "3¡¢¸¨µ¼Ô±" << endl;
+			cout << "è¯·é€‰æ‹©ç±»åˆ«" << endl;
+			cout << "1ã€å­¦ç”Ÿ" << endl;
+			cout << "2ã€è€å¸ˆ" << endl;
+			cout << "3ã€è¾…å¯¼å‘˜" << endl;
 			cin >> s;
 			switch (s)
 			{
 			case 1:
-				cout << "ÇëÑ¡Ôñ¸ÃÈËÔ±ËùÔÚ°à¼¶" << endl;
+				cout << "è¯·é€‰æ‹©è¯¥äººå‘˜æ‰€åœ¨ç­çº§" << endl;
 				cin >> clas;
-				aa = new stu(id, name, "Ñ§Éú",clas);
+				aa = new stu(id, name, "å­¦ç”Ÿ",clas);
 				break;
 			case 2:
-				cout << "ÇëÑ¡Ôñ¸ÃÈËÔ±ËùÔÚ°à¼¶" << endl;
+				cout << "è¯·é€‰æ‹©è¯¥äººå‘˜æ‰€åœ¨ç­çº§" << endl;
 				cin >> clas;
-				aa = new tea(id, name, "ÀÏÊ¦",clas);
+				aa = new tea(id, name, "è€å¸ˆ",clas);
 				break;
 			case 3:
-				cout << "ÇëÑ¡Ôñ¸ÃÈËÔ±ËùÔÚ°à¼¶" << endl;
+				cout << "è¯·é€‰æ‹©è¯¥äººå‘˜æ‰€åœ¨ç­çº§" << endl;
 				cin >> clas;
-				aa = new fudao(id, name, "¸¨µ¼Ô±",clas);
+				aa = new fudao(id, name, "è¾…å¯¼å‘˜",clas);
 				break;
 			}
 			newarr[this->num + i] = aa;
@@ -112,12 +112,12 @@ void admin::add()
 		this->a = newarr;
 		this->num = newsize;
 		this->Isempty = false;
-		cout << "³É¹¦Ìí¼Ó" << num << "ÃûĞÂÈËÔ±£¡" << endl;
+		cout << "æˆåŠŸæ·»åŠ " << num << "åæ–°äººå‘˜ï¼" << endl;
 		this->save();
 	}
 	else
 	{
-		cout << "ÊäÈë´íÎó£¡" << endl;
+		cout << "è¾“å…¥é”™è¯¯ï¼" << endl;
 	}
 	system("pause");
 	system("cls");
@@ -143,7 +143,7 @@ int admin::get_EmpNum()
 	int num = 0;
 	while (ifs >> id && ifs >> name && ifs >> dId)
 	{
-		//¼ÇÂ¼ÈËÊı
+		//è®°å½•äººæ•°
 		num++;
 	}
 	ifs.close();
@@ -153,17 +153,17 @@ void admin::Det()
 {
 	if (this->Isempty)
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ»ò¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨æˆ–è®°å½•ä¸ºç©ºï¼" << endl;
 	}
 	else
 	{
 		int c;
-		cout << "ÇëÊäÈëÄúËùÒªÉ¾³ıµÄidºÅ";
+		cout << "è¯·è¾“å…¥æ‚¨æ‰€è¦åˆ é™¤çš„idå·";
 		cin >> c;
 		int a = this->Isexist(c);
 		if (a == -1)
 		{
-			cout << "Ô±¹¤²»´æÔÚ£¡" << endl;
+			cout << "å‘˜å·¥ä¸å­˜åœ¨ï¼" << endl;
 		}
 		else
 		{
@@ -173,7 +173,7 @@ void admin::Det()
 			}
 			this->num--;
 			this->save();
-			cout << "É¾³ı³É¹¦£¡" << endl;
+			cout << "åˆ é™¤æˆåŠŸï¼" << endl;
 		}
 	}
 	system("pause");
@@ -183,49 +183,49 @@ void admin::Mod()
 {
 	if (this->Isempty)
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ»ò¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨æˆ–è®°å½•ä¸ºç©ºï¼" << endl;
 	}
 	else
 	{
 		int c;
-		cout << "ÇëÊäÈëÄãÏëÒªĞŞ¸ÄµÄÈËÔ±id: ";//¿ÉÒÔÏÔÊ¾
+		cout << "è¯·è¾“å…¥ä½ æƒ³è¦ä¿®æ”¹çš„äººå‘˜id: ";//å¯ä»¥æ˜¾ç¤º
 		cin >> c;
 		int a = this->Isexist(c);
 		if (a == -1)
 		{
-			cout << "Ô±¹¤²»´æÔÚ£¡" << endl;
+			cout << "å‘˜å·¥ä¸å­˜åœ¨ï¼" << endl;
 		}
 		else
 		{
-			delete this->a[a];//debug ¿¨ÔÚÕâÀï
+			delete this->a[a];//debug å¡åœ¨è¿™é‡Œ
 			int id, s;
 			A* aa = NULL;
 			string name,clas;
-			cout << "ÇëÊäÈëĞÂµÄid:";
+			cout << "è¯·è¾“å…¥æ–°çš„id:";
 			cin >> id;
-			cout << "ÇëÊäÈëĞÂµÄĞÕÃû:";
+			cout << "è¯·è¾“å…¥æ–°çš„å§“å:";
 			cin >> name;
-			cout << "ÇëÑ¡Ôñ¸ÃÈËÔ±ËùÔÚ°à¼¶" << endl;
+			cout << "è¯·é€‰æ‹©è¯¥äººå‘˜æ‰€åœ¨ç­çº§" << endl;
 			cin >> clas;
-			cout << "ÇëÑ¡ÔñÀà±ğ" << endl;
-			cout << "1¡¢Ñ§Éú" << endl;
-			cout << "2¡¢ÀÏÊ¦" << endl;
-			cout << "3¡¢¸¨µ¼Ô±" << endl;
+			cout << "è¯·é€‰æ‹©ç±»åˆ«" << endl;
+			cout << "1ã€å­¦ç”Ÿ" << endl;
+			cout << "2ã€è€å¸ˆ" << endl;
+			cout << "3ã€è¾…å¯¼å‘˜" << endl;
 			cin >> s;
 			switch (s)
 			{
 			case 1:
-				aa = new stu(id, name, "Ñ§Éú", clas);
+				aa = new stu(id, name, "å­¦ç”Ÿ", clas);
 				break;
 			case 2:
-				aa = new tea(id, name, "ÀÏÊ¦", clas);
+				aa = new tea(id, name, "è€å¸ˆ", clas);
 				break;
 			case 3:
-				aa = new fudao(id, name, "¸¨µ¼Ô±", clas);
+				aa = new fudao(id, name, "è¾…å¯¼å‘˜", clas);
 				break;
 			}
 			this->a[a] = aa;
-			cout<<"ĞŞ¸Ä³É¹¦£¡"<<endl;
+			cout<<"ä¿®æ”¹æˆåŠŸï¼"<<endl;
 			this->save();
 		}
 	}
@@ -236,21 +236,21 @@ void admin::find()
 {
 	if (this->Isempty)
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ»ò¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨æˆ–è®°å½•ä¸ºç©ºï¼" << endl;
 	}
 	else
 	{
 		int c;
-		cout << "ÇëÊäÈëÄãÏëÒª²éÕÒÈËÔ±µÄid: ";
+		cout << "è¯·è¾“å…¥ä½ æƒ³è¦æŸ¥æ‰¾äººå‘˜çš„id: ";
 		cin >> c;
 		int a = this->Isexist(c);
 		if (a == -1)
 		{
-			cout << "Ô±¹¤²»´æÔÚ£¡" << endl;
+			cout << "å‘˜å·¥ä¸å­˜åœ¨ï¼" << endl;
 		}
 		else
 		{
-			cout<<"²éÕÒ³É¹¦£¡"<<endl;
+			cout<<"æŸ¥æ‰¾æˆåŠŸï¼"<<endl;
 			this->a[a]->showinfo();
 		}
 	}
@@ -261,15 +261,15 @@ void admin::bulu()
 {
 	if (this->Isempty)
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ»ò¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨æˆ–è®°å½•ä¸ºç©ºï¼" << endl;
 	}
 	else
 	{
 		int c;
-		cout << "ÇëÑ¡ÔñÅÅĞò·½Ê½" << endl;
-		cout << "1¡¢ÉıĞò" << endl;
-		cout << "2¡¢µ¹Ğò" << endl;
-		cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ£º";
+		cout << "è¯·é€‰æ‹©æ’åºæ–¹å¼" << endl;
+		cout << "1ã€å‡åº" << endl;
+		cout << "2ã€å€’åº" << endl;
+		cout << "è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š";
 		cin >> c;
 		switch (c)
 		{
@@ -302,23 +302,23 @@ void admin::bulu()
 			}
 			break;
 		default:
-			cout << "ÊäÈëµÄÑ¡Ôñ²»¶Ô£¬ÇëÖØĞÂÊäÈë¡£" << endl;
+			cout << "è¾“å…¥çš„é€‰æ‹©ä¸å¯¹ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚" << endl;
 		}
-		this->save();//½«ÅÅĞòºóµÄÊı¾İ±£´æµ½ÎÄ¼şÀï
-		this->showInfo();//½«ÅÅĞòºóµÄÊı¾İÕ¹Ê¾
+		this->save();//å°†æ’åºåçš„æ•°æ®ä¿å­˜åˆ°æ–‡ä»¶é‡Œ
+		this->showInfo();//å°†æ’åºåçš„æ•°æ®å±•ç¤º
 	}
 }
 void admin::qk() 
 {
 	if (this->Isempty)
 	{
-		cout << "ÎÄ¼ş²»´æÔÚ»ò¼ÇÂ¼Îª¿Õ£¡" << endl;
+		cout << "æ–‡ä»¶ä¸å­˜åœ¨æˆ–è®°å½•ä¸ºç©ºï¼" << endl;
 	}
 	else
 	{
 		string c;
-		cout << "È·¶¨Çå¿ÕËùÓĞÊı¾İÂğ£¿\tÈ·¶¨£ºy,È¡Ïû£ºn" << endl;
-		cout << "ÊäÈëÄúµÄÑ¡Ôñ£º";
+		cout << "ç¡®å®šæ¸…ç©ºæ‰€æœ‰æ•°æ®å—ï¼Ÿ\tç¡®å®šï¼šy,å–æ¶ˆï¼šn" << endl;
+		cout << "è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š";
 		cin >> c;
 		if (c == "y")
 		{
@@ -327,7 +327,7 @@ void admin::qk()
 			this->a = NULL;
 			this->Isempty = true;
 			this->save();
-			cout << "ÒÑÇå¿Õ£¡" << endl;
+			cout << "å·²æ¸…ç©ºï¼" << endl;
 		}
 		else
 		{

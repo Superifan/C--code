@@ -8,37 +8,37 @@ int main()
 	{
 		a.show_menu();
 		int c;
-		cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ£º";
+		cout << "è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š";
 		cin >> c;
 		switch (c)
 		{
-		case 0: //ÍË³ö
-			cout << "³ÌÐòÒÑÍË³ö£¡»¶Ó­ÄúµÄÏÂ´ÎÊ¹ÓÃ£¡" << endl;
+		case 0: //é€€å‡º
+			cout << "ç¨‹åºå·²é€€å‡ºï¼æ¬¢è¿Žæ‚¨çš„ä¸‹æ¬¡ä½¿ç”¨ï¼" << endl;
 			return 0;
 			break;
-		case 1: //Ìí¼ÓÐÅÏ¢
+		case 1: //æ·»åŠ ä¿¡æ¯
 			a.add();
 			break;
-		case 2: //²é¿´ÐÅÏ¢
+		case 2: //æŸ¥çœ‹ä¿¡æ¯
 			a.showInfo();
 			break;
-		case 3: //É¾³ýÐÅÏ¢
+		case 3: //åˆ é™¤ä¿¡æ¯
 			a.Det();
 			break;
-		case 4: //ÐÞ¸ÄÐÅÏ¢
+		case 4: //ä¿®æ”¹ä¿¡æ¯
 			a.Mod();
 			break;
-		case 5: //²éÕÒÐÅÏ¢
+		case 5: //æŸ¥æ‰¾ä¿¡æ¯
 			a.find();
 			break;
-		case 6: //ÅÅÐòÐÅÏ¢
+		case 6: //æŽ’åºä¿¡æ¯
 			a.bulu();
 			break;
-		case 7: //Çå¿ÕÐÅÏ¢
+		case 7: //æ¸…ç©ºä¿¡æ¯
 			a.qk();
 			break;
 		default:
-			cout <<"ÄúËùÊäÈëµÄÑ¡Ïî²»ÕýÈ·£¬ÇëÖØÐÂÊäÈë!"<<endl ;
+			cout <<"æ‚¨æ‰€è¾“å…¥çš„é€‰é¡¹ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥!"<<endl ;
 		}
 	}
 	system("pause");
